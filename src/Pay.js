@@ -16,7 +16,6 @@ function Pay(props) {
     const response = await window.webln.sendPayment(paymentRequest);
     console.log(response);
     setPreimage(response.preimage);
-    alert(`success! ${response.preimage}`);
   }
 
   return (

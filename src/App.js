@@ -33,8 +33,7 @@ function App({ songsUrl, uploadUrl }) {
       window.localStorage.setItem("albyToken", tokenData);
     });
     provider.on('sendPayment', (result) => {
-      console.info(result);
-      toast(`paid. preimage: ${result.preimage}`);
+      toast(`paid. preimage: ${result.payment_preimage}`);
     });
     window.webln = provider;
     
